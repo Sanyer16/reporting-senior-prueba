@@ -9,7 +9,7 @@ USE [bootcamp]  --Se usa cualquier base para que almacene sl SP
 
 ALTER PROCEDURE sp_reporting
 
---a.	Que reciba 3 parámetros un entero, un texto y una fecha:
+--a.	Que reciba 3 parï¿½metros un entero, un texto y una fecha:
 
     @entero INT,
     @texto  NVARCHAR(100),
@@ -19,14 +19,14 @@ BEGIN
     DECLARE @anio INT, @mes INT, @dia INT, @largo INT, @comparacion NVARCHAR(20);
     DECLARE @contador INT = 1;
 
---b. Con el parámetro de fecha se debe sacar año, día y mes como variables aparte:
+--b. Con el parï¿½metro de fecha se debe sacar aï¿½o, dï¿½a y mes como variables aparte:
 
     SET @anio = YEAR(@fecha);
     SET @mes  = MONTH(@fecha);
     SET @dia  = DAY(@fecha);
 
 	/*
-	c.Con la variable texto se debe obtener el largo de la información guarda en esta y dependiendo del largo
+	c.Con la variable texto se debe obtener el largo de la informaciï¿½n guarda en esta y dependiendo del largo
 	se debe agregar un campo indicando si es mayor a la variable tipo entero o menor.:
 	*/
 
@@ -44,13 +44,13 @@ BEGIN
         @entero      AS Entero,
         @texto       AS Texto,
         @fecha       AS Fecha,
-        @anio        AS Año,
+        @anio        AS Anio,
         @mes         AS Mes,
         @dia         AS Dia,
         @largo       AS Largo_Texto,
         @comparacion AS Comparacion;
 
---d. Después de esto se debe generar un código para que las veces del numero entero imprima la variable texto:
+--d. Despuï¿½s de esto se debe generar un cï¿½digo para que las veces del numero entero imprima la variable texto:
 
     WHILE @contador <= @entero
     BEGIN
