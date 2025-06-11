@@ -1,7 +1,7 @@
 
 
 /*
-6.	Encuentre el error en el siguiente código:
+6.	Encuentre el error en el siguiente codigo:
 create table ##op as
 (
 id int,

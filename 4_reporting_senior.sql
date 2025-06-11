@@ -22,7 +22,7 @@ JOIN TablaB AS B ON A.ID = B.ID
 
 -- Tabla PAISES:
 -- ID_ALUMNO | NUEVO_PAIS
---     1     | Japón
+--     1     | Japon
 
 -- UPDATE:
 UPDATE A

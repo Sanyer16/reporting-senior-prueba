@@ -5,12 +5,12 @@
 */
 
 /*
-Un MERGE es un comando que sirve para comparar dos tablas y según esa comparación, actualizar, insertar o eliminar datos de una de ellas.
+Un MERGE es un comando que sirve para comparar dos tablas y segun esa comparacion, actualizar, insertar o eliminar datos de una de ellas.
 
-¿Cuándo se usa?
+-Cuando se usa?
 
--Tienes una tabla con datos nuevos o actualizados (por ejemplo, una tabla temporal o una importación).
--Quieres que SQL decida automáticamente si debe actualizar, insertar o borrar en la tabla principal, todo en una sola sentencia.
+-Tienes una tabla con datos nuevos o actualizados (por ejemplo, una tabla temporal o una importacion).
+-Quieres que SQL decida automaticamente si debe actualizar, insertar o borrar en la tabla principal, todo en una sola sentencia.
 */
 
 MERGE INTO TABLA_DESTINO AS D
@@ -30,11 +30,11 @@ WHEN NOT MATCHED BY SOURCE THEN
     DELETE;
 
 /*
-| Parte                        | Explicación                                                                |
+| Parte                        | Explicacion                                                                |
 | ---------------------------- | -------------------------------------------------------------------------- |
 | `MERGE INTO TABLA_DESTINO`   | Especifica la tabla que quieres modificar (actualizar, insertar o borrar). |
 | `USING TABLA_ORIGEN`         | La tabla con los nuevos datos a comparar.                                  |
-| `ON D.ID = O.ID`             | Condición para encontrar coincidencias.                                    |
+| `ON D.ID = O.ID`             | Condicion para encontrar coincidencias.                                    |
 | `WHEN MATCHED THEN UPDATE`   | Si hay coincidencia: actualiza.                                            |
 | `WHEN NOT MATCHED BY TARGET` | Si hay en la fuente pero no en el destino: inserta.                        |
 | `WHEN NOT MATCHED BY SOURCE` | Si hay en el destino pero no en la fuente: elimina.                        |

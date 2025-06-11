@@ -2,7 +2,7 @@
 
 /*
 
-7.	 Indicar el código para ejecutar una consulta por un índice especifico. With 
+7.	 Indicar el codigo para ejecutar una consulta por un indice especifico. With 
 
 */
 
@@ -10,7 +10,7 @@
 /*
 R:
 
-Permite forzar el uso de un índice específico en una consulta, en lugar de dejar que SQL Server decida automáticamente.
+Permite forzar el uso de un indice especifico en una consulta, en lugar de dejar que SQL Server decida automaticamente.
 
 */
 

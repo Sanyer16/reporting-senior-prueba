@@ -8,9 +8,9 @@
 
 /*
 R:
-Un CROSS JOIN es un tipo de combinación entre tablas que devuelve todas las combinaciones posibles de filas entre dos tablas.
+Un CROSS JOIN es un tipo de combinacion entre tablas que devuelve todas las combinaciones posibles de filas entre dos tablas.
 
-¿Cuándo se usa?
+-Cuando se usa?
 -Cuando necesitas probar todas las combinaciones posibles entre elementos de dos listas.
 -Por ejemplo, para combinar colores y tallas, productos y regiones, fechas y recursos, etc.
 

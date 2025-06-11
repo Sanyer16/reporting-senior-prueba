@@ -1,22 +1,22 @@
 
 /*
-2. Realizar un procedimiento almacenado el cual reciba un parámetro proveniente de una  rdl, 
-el cual trae información almacenada de un parámetro de selección múltiple. Y la respuesta debe devolver una consulta
-con filtro de este parámetro.
+2. Realizar un procedimiento almacenado el cual reciba un parametro proveniente de una  rdl, 
+el cual trae informacion almacenada de un parametro de seleccion multiple. Y la respuesta debe devolver una consulta
+con filtro de este parametro.
 */
 
 
 /*
-Un archivo .RDL (Report Definition Language) es un archivo de definición de reportes
+Un archivo .RDL (Report Definition Language) es un archivo de definicion de reportes
 utilizado por Microsoft SQL Server Reporting Services (SSRS).
 
--Es un archivo XML que describe el diseño, la estructura y la lógica de un informe.
+-Es un archivo XML que describe el diseno, la estructura y la logica de un informe.
 
-Contiene información como:
-• Los campos del dataset (consultas SQL o procedimientos almacenados).
-• La configuración de parámetros.
-• El diseño visual: tablas, gráficos, textos, colores, agrupamientos, etc.
-• Las fuentes de datos a las que se conecta.
+Contiene informacion como:
+- Los campos del dataset (consultas SQL o procedimientos almacenados).
+- La configuracion de parametros.
+- El diseno visual: tablas, graficos, textos, colores, agrupamientos, etc.
+- Las fuentes de datos a las que se conecta.
 
 */
 
@@ -32,10 +32,10 @@ CREATE TABLE ALUMNO (
 --INSERTAR DATOS
 
 INSERT INTO ALUMNO (NOMBRE, APELLIDO, PAIS) VALUES
-('Goku', 'Son', 'Japón'),
+('Goku', 'Son', 'Japon'),
 ('Vegeta', 'Prince', 'Colombia'),
-('Naruto', 'Uzumaki', 'Japón'),
-('Sakura', 'Haruno', 'México'),
+('Naruto', 'Uzumaki', 'Japon'),
+('Sakura', 'Haruno', 'Mexico'),
 ('Ichigo', 'Kurosaki', 'Chile'),
 ('Luffy', 'Monkey D.', 'Colombia');
 
@@ -57,25 +57,25 @@ BEGIN
 END;
 
 --EJECUTAR SP
-EXEC sp_filtrar_por_paises @ListaPaises = 'Colombia,México';
+EXEC sp_filtrar_por_paises @ListaPaises = 'Colombia,Mexico';
 
 
 --LO QUE SE DEBE DE HACER EN .rdl (SSRS)
 
 /*
-1. Crear un parámetro en SSRS
+1. Crear un parametro en SSRS
 -Nombre: Paises
 -Tipo: Text
--Permitir múltiples valores: activado
+-Permitir multiples valores: activado
 
 2. Modificar el dataset del reporte
 EXEC sp_filtrar_por_paises @ListaPaises = @Paises
 
-3. En la expresión del parámetro (código SSRS)
+3. En la expresion del parametro (codigo SSRS)
 =Join(Parameters!Paises.Value, ",")
 
 Resultado final
-Cuando el usuario selecciona varios países en el reporte (checkboxes), SSRS:
+Cuando el usuario selecciona varios paises en el reporte (checkboxes), SSRS:
 
 -Une esos valores con coma,
 -Llama a tu SP con ese texto,
