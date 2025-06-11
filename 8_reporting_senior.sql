@@ -26,4 +26,5 @@ OPCIÓN 2: Exportar desde SQL Server a Excel (por Management Studio)
 -Puedes elegir exportar tablas o usar una consulta personalizada.
 -Completa el asistente y se exportará.
 
+
 */
